@@ -27,8 +27,8 @@ draw2 <- function(x1, dash1, school, question, k=0.125, barcol=c("#ecb91e", "#f8
   # First, the percentages should add up to near 100 -  maybe 96 to 104 are credible.
   # Second, they may pass a bunch of 0s, then you should not plot the national average. - e.g. they said that they had 14 things to plot. 14/4 doesn't come out even
   # remove the border
-  wd <- paste("C:/Users/mlee/Documents/Leap/Figures/Fig2/",school,sep="")
-  setwd(wd)
+  # wd <- paste("C:/Users/mlee/Documents/Leap/Figures/Fig2/",school,sep="")
+  # setwd(wd)
   file=paste(question,"_fig2.png",sep="")
   png(file=file,width=4680,height=1260,res=500)
   par(mai=c(0,0,0,0))
@@ -69,3 +69,9 @@ draw2 <- function(x1, dash1, school, question, k=0.125, barcol=c("#ecb91e", "#f8
 	dev.off()
   dev.off()
 }
+
+# Example
+# x1 <- c(0,0,70,30,0,0,45,55,0,14,60,26,0,14,26,60)
+# dash1 <- c(30,45,70,18,30,47,70,20,30,48,70,15,30,48,70,17)
+# draw2(x1,dash1, "Chavez Public School","Q34")
+

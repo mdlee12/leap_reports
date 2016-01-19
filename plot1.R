@@ -13,9 +13,9 @@ showtext.auto()
 
 draw1 <- function(y1,y2,y3, school1, school2, school3, k=0.8, h=0.6) {
   # remove the border
-  wd <- paste("C:/Users/mlee/Documents/Leap/Figures/Fig1/",school,sep="")
-  setwd(wd)
-  file=paste(school1,"_plot1.png",sep="")
+  # wd <- paste("C:/Users/mlee/Documents/Leap/Figures/Fig1/",school,sep="")
+  # setwd(wd)
+  file=paste(school1,"_fig1.png",sep="")
   png(file=file,width=5040,height=720,res=500)
   par(mai=c(0,0,0,0))
   # make a blank canvas
@@ -96,6 +96,7 @@ draw1 <- function(y1,y2,y3, school1, school2, school3, k=0.8, h=0.6) {
   dev.off()
 }
 
-for (i in 1:length(test$school_name)) { draw1(test$Score[i],test$CPS[i],test$National.Average[i],test$school_name[i],"Chicago Area Schools","All Schools")}
+# Example
+# draw1(26,68,65,"Auer Avenue School","Milwaukee Schools","Wisconsin")
 
-# draw1(26,68,65,"Chavez Teacher Survey Results","Chicago Area Schools","All Schools")
+# for (i in 1:length(test$school_name)) { draw1(test$Score[i],test$CPS[i],test$National.Average[i],test$school_name[i],"Milwaukee Schools","All Wisconsin")}
